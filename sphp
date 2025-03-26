@@ -23,11 +23,10 @@ else
     fi
 fi
 
-echo "Switch to PHP $switch_to"
-
 switch_from=`php --version | grep -oP "PHP (\d\.\d+?)" | cut -d " " -f2`
-echo "Switch from PHP $switch_from"
-echo "This will require sudo privileges"
+
+echo "Switching from PHP $switch_from to PHP $switch_to."
+echo "This will require sudo privileges."
 
 echo "Switching CLI"
 sudo update-alternatives --set php /usr/bin/php$switch_to
@@ -37,7 +36,7 @@ echo "Switching apache"
 sudo a2dismod php$switch_from;
 sudo a2enmod php$switch_to;
 
-read -p "Activate new config 'sudo systemctl restart apache2' (y/N)?" yn
+read -p "Restart apache2? (y/N)" yn
 case $yn in
         [Yy]* ) sudo systemctl restart apache2; break;;
         [Nn]* ) exit;;
