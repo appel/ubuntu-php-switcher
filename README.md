@@ -3,6 +3,8 @@ Ubuntu PHP switcher is a simple script to switch your Apache and CLI configs qui
 
 If you support multiple products/projects that are built using either brand new or old legacy PHP functionality and you find it a pain to change config files continually this will make the whole process just one command.
 
+Edit: I forked the script to fix the install command below. I had an issue with sudo and then the url returned a 404. I might l
+
 ## Caveats
 **requires sudo**
 
@@ -12,9 +14,8 @@ This does not check the validity of the version given or if that version exists/
 
 ## Installation
 
-    $ curl -L https://raw.githubusercontent.com/chancegarcia/ubuntu-php-switcher/master/sphp > /usr/local/bin/sphp
-    $ chmod +x /usr/local/bin/sphp
-    
+    $ curl -L https://raw.githubusercontent.com/appel/ubuntu-php-switcher/master/sphp | sudo tee /usr/local/bin/sphp
+    $ sudo chmod +x /usr/local/bin/sphp
     
 ## Usage
 Simply type `sphp` and the version you want to switch to
