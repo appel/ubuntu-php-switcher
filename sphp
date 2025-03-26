@@ -38,7 +38,7 @@ sudo a2enmod php$switch_to;
 
 read -p "Restart apache2? (y/N)" yn
 case $yn in
-        [Yy]* ) sudo systemctl restart apache2; break;;
+        [Yy]* ) sudo service apache2 restart;;
         [Nn]* ) exit;;
         * ) echo exit;;
     esac
