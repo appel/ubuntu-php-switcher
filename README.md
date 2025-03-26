@@ -3,7 +3,7 @@ Ubuntu PHP switcher is a simple script to switch your Apache and CLI configs qui
 
 If you support multiple products/projects that are built using either brand new or old legacy PHP functionality and you find it a pain to change config files continually this will make the whole process just one command.
 
-Edit: I forked the script to fix the install command below. I had an issue with sudo and then the url returned a 404. I might l
+Edit: I forked the script to fix the install command below. I had an issue with sudo and then the url returned a 404. I also changed some of the wording in the script itself.
 
 ## Caveats
 **requires sudo**
